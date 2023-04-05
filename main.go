@@ -13,7 +13,7 @@ import (
 func hi(w http.ResponseWriter, req *http.Request) {
 	b, _ := ioutil.ReadFile("./filler.jpg")
 	base64.StdEncoding.EncodeToString(b)
-	fmt.Fprintf(w, "<html>\n")
+	fmt.Fprintf(w, "<!DOCTYPE html><html lang=\"en\">\n")
 	fmt.Fprintf(w, "<body>\n")
 	fmt.Fprintf(w, "<img src=\"data:image/jpeg;base64,%v\">\n", base64.StdEncoding.EncodeToString(b))
 	fmt.Fprintf(w, "</body>\n")
