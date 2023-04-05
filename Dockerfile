@@ -8,8 +8,8 @@ FROM scratch
 COPY --from=0 /opt/main /main
 COPY filler.jpg /filler.jpg
 
-ENV PORT 3000
+ENV PORT 80
 
-EXPOSE 3000/tcp
+EXPOSE 80/tcp
 
 ENTRYPOINT ["/main"]
